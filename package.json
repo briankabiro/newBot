@@ -1,0 +1,16 @@
+{
+  "name": "newbot",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "botpress": "0.x",
+    "botpress-messenger": "^2.0.6"
+  },
+  "scripts": {
+    "start": "botpress start",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "AGPL-3.0"
+}

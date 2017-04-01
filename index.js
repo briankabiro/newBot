@@ -19,6 +19,6 @@ module.exports = function(bp) {
 		type:'message',
 		text: /.+/i
 	}, (event, next) => {
-		bp.messenger.sendText(event.user.id, "Sorry I only anser to hello world ....")
+		bp.messenger.sendText(event.user.id, "Sorry I only answer to hello world ....")
 	})
 }

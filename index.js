@@ -19,6 +19,8 @@ module.exports = function(bp) {
 		type:'message',
 		text: /.+/i
 	}, (event, next) => {
+		var jaundice = fs.readFileSync('lastList.txt', 'utf8');
+		
 		bp.messenger.sendText(event.user.id, "Sorry I only answer to hello world ....")
 	})
 }

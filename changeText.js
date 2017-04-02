@@ -1,14 +1,14 @@
 var fs = require ('fs')
-var word = "woolrich";
+var word = "ursul";
 
-fs.readFile('lastList.txt','utf8', function(err, data){
+fs.readFile('lastList.txt','utf8',function(err, data){
 	if(err) console.error(err);
-	var jaundice = data.split(",");
-	jaundice.forEach(function(brand){
-		if(brand == word){
-			console.log('found it')
-		}else{
-			console.log('nada')
+	data = data.split(",");
+	console.log(typeof data);
+	//console.log(data)
+	for(var key in data){
+		if(data[key] ===word){
+			console.log("true")	
 		}
-	})
+	}
 })

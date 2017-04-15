@@ -1,3 +1,5 @@
+const clothes = require('./clothes.json');
+
 module.exports = function(bp) {
   bp.middlewares.load()
 
@@ -19,6 +21,12 @@ module.exports = function(bp) {
 		type:'message',
 		text: /.+/i
 	}, (event, next) => {
-		bp.messenger.sendText(event.user.id, "Sorry I only answer to hello world ....")
+		for(var i=0; i<clothes.brands.length;i++){
+			if(clothes.brands[i] == event.message.text){
+				bp.messenger.sendText("Iyo ni Legit mbaya")	
+			}else{
+				bp.messenger.sendText(event.user.id + ", iyo hapana tambua")
+			}
+		}
 	})
 }

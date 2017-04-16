@@ -21,12 +21,14 @@ module.exports = function(bp) {
 		type:'message',
 		text: /.+/i
 	}, (event, next) => {
-		for(var i=0; i<clothes.brands.length;i++){
+		console.log(event);
+		//bp.messenger.sendText(event.user.id)
+		/*for(var i=0; i<clothes.brands.length;i++){
 			if(clothes.brands[i] == event.message.text){
 				bp.messenger.sendText("Iyo ni Legit mbaya")	
 			}else{
 				bp.messenger.sendText(event.user.id + ", iyo hapana tambua")
 			}
-		}
+		}*/
 	})
 }
